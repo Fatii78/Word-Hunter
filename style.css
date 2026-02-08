@@ -31,6 +31,7 @@ body{
   font-size: 100px;
   margin-bottom: 50px;
   margin-top: -80px;
+  letter-spacing: 18px;
 }
 
 .menu{
@@ -54,6 +55,7 @@ body{
   background: black;
   color: white;
 }
+
 /* game*/
 .topBar {
   display: grid;
@@ -68,7 +70,8 @@ body{
   font-size: 24px;
   cursor: pointer;
   justify-self: start;
-  margin: 0;
+  margin-top:-150px; 
+  margin-left: -280px;
 }
 
 .catTitle {
@@ -84,11 +87,25 @@ body{
   letter-spacing: 12px;
   text-align: left;
   margin-top: 30px;
+  margin-left: -300px;
 }
 
 .keyboard{
   display: grid;
   grid-template-columns: repeat(6, 48px);
   gap: 12px;
-  margin-top: 18px;
+  margin-top: 15px;
+  margin-left: -370px;
+}
+
+/*win*/
+
+#homeb {
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
+  justify-self: start;
+  margin-top:-50px; 
+  margin-left: -280px;
 }

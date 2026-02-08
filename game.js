@@ -29,10 +29,13 @@ for (let letter  of secretWord){
       BlankSpace += letter + " "
     }else{
       BlankSpace += "_ "
-    }
+    }}
+    word.textContent = BlankSpace
+     if (!BlankSpace.includes("_")){
+    window.location.href = "win.html"
 }
-word.textContent = BlankSpace
 }
+
 //keyboard
 const keyboard = document.getElementById("keyboard")
 
