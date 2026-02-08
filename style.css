@@ -65,6 +65,8 @@ body{
   font-size: 24px;
   cursor: pointer;
   justify-self: start;
+   margin-top :-310PX ;
+   margin-left: -300px;
 }
 
 .catTitle {
@@ -72,5 +74,12 @@ body{
   font-family: "Patrick Hand", cursive;
   font-size: 24px;
   letter-spacing: 4px;
-  margin: 0;
+  margin-top :-290PX ;
+}
+
+.word{
+  margin-top: 10px;
+  font-size: 40px;
+  letter-spacing: 12px;
+  text-align: left;
 }

@@ -1,9 +1,10 @@
+//words
 const Words = {
   ANIMALS: ["COW", "HORSE", "DOLPHIN", "OWL", "FOX", "ZEBRA", "ELEPHANT", "MONKEY", "KANGAROO"],
   FOODS: ["TOMATO", "RICE", "SALAD", "SOUP", "PANCAKE", "PIZZA", "PASTA", "YOGURT", "CARROT"],
   JOBS: ["ENGINEER", "POLICE", "CHEF", "FARMER", "TEACHER", "DRIVER", "WAITER", "ACTOR", "DOCTOR"]
 }
-
+//back button + title
 const backB = document.getElementById("backB")
 const categoryTitle = document.getElementById("categoryTitle")
 
@@ -13,9 +14,16 @@ categoryTitle.textContent = selectedCategory
 backB.addEventListener("click", () => {
   window.location.href = "home.html"
 })
-
+//select a random word
 const categoryWords = Words[selectedCategory]
 const random = Math.floor(Math.random() * categoryWords.length)
 const secretWord = categoryWords[random]
 console.log(selectedCategory, secretWord)
 
+
+const word = document.getElementById("word")
+let  BlankSpace = ""
+for (let char  of secretWord){
+  BlankSpace += "_ "
+}
+word.textContent = BlankSpace
