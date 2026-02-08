@@ -20,10 +20,47 @@ const random = Math.floor(Math.random() * categoryWords.length)
 const secretWord = categoryWords[random]
 console.log(selectedCategory, secretWord)
 
-
+//blankspace ---
 const word = document.getElementById("word")
+function blankspace(){
 let  BlankSpace = ""
-for (let char  of secretWord){
-  BlankSpace += "_ "
+for (let letter  of secretWord){
+  if(chooseIetter.has(letter)){
+      BlankSpace += letter + " "
+    }else{
+      BlankSpace += "_ "
+    }
 }
 word.textContent = BlankSpace
+}
+//keyboard
+const keyboard = document.getElementById("keyboard")
+
+let chooseIetter = new Set()
+function Keyboard(){
+keyboard.textContent = ""
+// دا يسوي لحروف في ARRAY
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").forEach(letter => {
+    const button = document.createElement("button")
+    button.textContent = letter
+    button.className = "key"
+    button.addEventListener("click", () => {
+      checkLetter(letter, button)
+    })
+    // نحطه في الصفحة 
+    keyboard.appendChild(button)
+  })
+}
+// check letter
+function checkLetter(letter, button){
+  button.disabled = true
+  if(secretWord.includes(letter)){
+    chooseIetter.add(letter)
+    blankspace()
+  }else{
+    console.log("Wrong")
+  }
+}
+
+blankspace()
+Keyboard()

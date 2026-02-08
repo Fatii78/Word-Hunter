@@ -30,6 +30,7 @@ body{
 .title{
   font-size: 100px;
   margin-bottom: 50px;
+  margin-top: -80px;
 }
 
 .menu{
@@ -45,6 +46,8 @@ body{
   background: white;
   cursor: pointer;
   font-size: 18px;
+  border-radius: 12px;
+
 }
 
 .category:hover{
@@ -65,21 +68,27 @@ body{
   font-size: 24px;
   cursor: pointer;
   justify-self: start;
-   margin-top :-310PX ;
-   margin-left: -300px;
+  margin: 0;
 }
 
 .catTitle {
   text-align: center;
   font-family: "Patrick Hand", cursive;
-  font-size: 24px;
+  font-size: 50px;
   letter-spacing: 4px;
-  margin-top :-290PX ;
+  margin: 0;
 }
 
 .word{
-  margin-top: 10px;
   font-size: 40px;
   letter-spacing: 12px;
   text-align: left;
+  margin-top: 30px;
+}
+
+.keyboard{
+  display: grid;
+  grid-template-columns: repeat(6, 48px);
+  gap: 12px;
+  margin-top: 18px;
 }
