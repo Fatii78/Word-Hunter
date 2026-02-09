@@ -36,7 +36,15 @@ for (let letter  of secretWord){
      if (!BlankSpace.includes("_")){
       clearInterval(timer)
       gameOver = true
+
+  const key = `lastDone_${selectedCategory}`
+  const prev = Number(localStorage.getItem(key)) || 0
+  localStorage.setItem(key, String(Math.max(prev, roundNumber)))
+  if (roundNumber === 8){
+    window.location.href = "welldone.html"
+  } else {
     window.location.href = "win.html"
+  }
 }
 }
 
