@@ -274,3 +274,20 @@ body {
 .btns button:hover {
   transform: scale(1.05);
 }
+
+/*welldone*/
+.title1{
+  font-size: 100px;
+  margin-bottom: 80px;
+  letter-spacing: 12px;
+}
+
+#homebb{
+  position: absolute;
+  border: none;
+  background: transparent;
+  font-size: 40px;
+  cursor: pointer;
+  left: 20px;
+ top: 38px;
+}
