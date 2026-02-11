@@ -43,7 +43,7 @@
 
 - [ ] Add more categories 
 - [ ] Add more round for each category
-- [ ] Add hint system for players (Give clues to help guess the word)
+- [x] Add hint system for players (Give clues to help guess the word)
 - [ ] Set a limit for wrong attempts
 - [ ] Add sound effects
 - [ ] Improve game design and animations
