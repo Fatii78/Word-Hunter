@@ -2,7 +2,6 @@ const fill = document.getElementById("fill")
 const percentEl = document.getElementById("percent")
 
 let p = 0
-
 const timer = setInterval(() => {
   p += 1
   fill.style.width = p + "%"
