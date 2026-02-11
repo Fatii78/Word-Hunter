@@ -133,3 +133,21 @@ noB.addEventListener("click", () => {
 function showGameOver(){
   gameOverr.classList.remove("hidden")
 }
+
+//hint
+document.addEventListener("DOMContentLoaded", () => {
+  const gift1 = document.getElementById("gift1")
+  const gift2 = document.getElementById("gift2")
+  if(!gift1 || !gift2) return
+  function useHint(giftEl){
+    const unrevealed = [...new Set(secretWord.split(""))]
+      .filter(ch => !chooseIetter.has(ch))
+    if(unrevealed.length === 0) return
+    const randomLetter = unrevealed[Math.floor(Math.random() * unrevealed.length)]
+    chooseIetter.add(randomLetter)
+    blankspace()
+    giftEl.classList.add("used")
+  }
+  gift1.addEventListener("click", () => useHint(gift1))
+  gift2.addEventListener("click", () => useHint(gift2))
+})
