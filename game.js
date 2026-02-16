@@ -135,10 +135,13 @@ function showGameOver(){
 }
 
 //hint
+
 document.addEventListener("DOMContentLoaded", () => {
   const gift1 = document.getElementById("gift1")
   const gift2 = document.getElementById("gift2")
   if(!gift1 || !gift2) return
+
+  
   function useHint(giftEl){
     const unrevealed = [...new Set(secretWord.split(""))]
       .filter(ch => !chooseIetter.has(ch))
@@ -148,6 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
     blankspace()
     giftEl.classList.add("used")
   }
+
   gift1.addEventListener("click", () => useHint(gift1))
   gift2.addEventListener("click", () => useHint(gift2))
 })
